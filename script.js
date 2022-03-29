@@ -1,5 +1,5 @@
 // Assignment Code
-var numberLength = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var characters = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?", "~"];
@@ -45,14 +45,30 @@ function generatePassword() {
     if (hasUpper === false && hasLower === false && hasCharacters === false && hasNumber === false) {
         alert(" You must select at least one cireteria of lowercase, uppercase or special characters")
     }
-    if(hasCharacters === true){
-        for(var i = 0; i < length; i++)
-        result += passwordCriteria.writePassword(Math.floor(Math.random() * characters.length));
+    if(hasCharacters === true) {
+        console.log("There will be special characters!");
+        for (var i = 0; i < length; i++)
+            result += characters[Math.floor(Math.random() * characters.length)];
+    }
+    if(hasUpper === true) {
+        console.log("There will be special characters!");
+        for (var i = 0; i < length; i++)
+            result += upperCase[Math.floor(Math.random() * upperCase.length)];
+    }
+    if(hasLower === true) {
+        console.log("There will be special characters!");
+        for (var i = 0; i < length; i++)
+            result += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+    }
+    if(hasNumber === true) {
+        console.log("There will be special characters!");
+        for (var i = 0; i < length; i++)
+            result += number[Math.floor(Math.random() * number.length)];
     }
 
 
 
-return result;
+    return result;
 }
 // function putItTogether() {
 
@@ -60,7 +76,7 @@ return result;
 //     var pwdCriteria = 0;
 //     var result = "";
 // }
-console.log(generatePassword());
+// console.log(generatePassword());
 
 
 
