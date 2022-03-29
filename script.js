@@ -47,22 +47,22 @@ function generatePassword() {
     }
     if(hasCharacters === true) {
         console.log("There will be special characters!");
-        for (var i = 0; i < length; i++)
+        for (var i = 0; i < [length]; i++)
             result += characters[Math.floor(Math.random() * characters.length)];
     }
     if(hasUpper === true) {
         console.log("There will be special characters!");
-        for (var i = 0; i < length; i++)
+        for (var i = 0; i < [length]; i++)
             result += upperCase[Math.floor(Math.random() * upperCase.length)];
     }
     if(hasLower === true) {
         console.log("There will be special characters!");
-        for (var i = 0; i < length; i++)
+        for (var i = 0; i < [length]; i++)
             result += lowerCase[Math.floor(Math.random() * lowerCase.length)];
     }
     if(hasNumber === true) {
         console.log("There will be special characters!");
-        for (var i = 0; i < length; i++)
+        for (var i = 0; i < [length]; i++)
             result += number[Math.floor(Math.random() * number.length)];
     }
 
