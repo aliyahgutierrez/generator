@@ -7,9 +7,9 @@ var characters = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?", "~
 
 var generateBtn = document.querySelector("#generate");
 
-const passwordLength = 0;
-const pwdCriteria = 0;
-const result = "";
+// const passwordLength = 0;
+// const pwdCriteria = 0;
+// const result = "";
 
 
 function generatePassword() {
@@ -45,29 +45,32 @@ function generatePassword() {
     if (hasUpper === false && hasLower === false && hasCharacters === false && hasNumber === false) {
         alert(" You must select at least one cireteria of lowercase, uppercase or special characters")
     }
-    if (characters === true && pwdCriteria < passwordLength) {
-        var sc = pwdCriteria.characters[Math.floor(Math.random() * 32)]
-        result = result + sc;
-        pwdCriteria++;
-    }
-    if (upperCase === true && pwdCriteria < passwordLength) {
-        var uc = pwdCriteria.upperCase[Math.floor(Math.random() * 26)]
-        result = result + uc;
-        pwdCriteria++;
 
-    } if (lowerCase === true && pwdCriteria < passwordLength) {
-        var lc = pwdCriteria.lowerCase[Math.floor(Math.random() * 26)]
-        result = result + lc;
-        pwdCriteria++;
+    // if (upperCase === true && pwdCriteria < passwordLength) {
+    //   var uc = pwdCriteria.upperCase[Math.floor(Math.random() * 26)]
+    //   result = result + uc;
+    //   result++;
 
-    }
-    if (numberLength === true && pwdCriteria < passwordLength) {
-        var nl = pwdCriteria.numberLength[Math.floor(Math.random() * 128)]
-        result = result + nl;
-        pwdCriteria++;
-    }
+    // } if (lowerCase === true && pwdCriteria < passwordLength) {
+    //   var lc = pwdCriteria.lowerCase[Math.floor(Math.random() * 26)]
+    //   result = result + lc;
+    //   result++;
+
+    // }
+    // if (numberLength === true && pwdCriteria < passwordLength) {
+    //   var nl = pwdCriteria.numberLength[Math.floor(Math.random() * 128)]
+    //   result = result + nl;
+    //   result++;
+    // }
 
     return result;
+}
+
+function putItTogether() {
+
+    var passwordLength = 0;
+    var pwdCriteria = 0;
+    var result = "";
 }
 
 
@@ -85,3 +88,4 @@ function writePassword() {
 // Add event listener to generate button
 // method(name, value)
 generateBtn.addEventListener("click", writePassword);
+
