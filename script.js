@@ -45,33 +45,23 @@ function generatePassword() {
     if (hasUpper === false && hasLower === false && hasCharacters === false && hasNumber === false) {
         alert(" You must select at least one cireteria of lowercase, uppercase or special characters")
     }
+    if(hasCharacters === true){
+        for(var i = 0; i < length; i++)
+        result += passwordCriteria.writePassword(Math.floor(Math.random() * characters.length));
+    }
 
-    // if (upperCase === true && pwdCriteria < passwordLength) {
-    //   var uc = pwdCriteria.upperCase[Math.floor(Math.random() * 26)]
-    //   result = result + uc;
-    //   result++;
 
-    // } if (lowerCase === true && pwdCriteria < passwordLength) {
-    //   var lc = pwdCriteria.lowerCase[Math.floor(Math.random() * 26)]
-    //   result = result + lc;
-    //   result++;
 
-    // }
-    // if (numberLength === true && pwdCriteria < passwordLength) {
-    //   var nl = pwdCriteria.numberLength[Math.floor(Math.random() * 128)]
-    //   result = result + nl;
-    //   result++;
-    // }
-
-    return result;
+return result;
 }
+// function putItTogether() {
 
-function putItTogether() {
+//     var passwordLength = 0;
+//     var pwdCriteria = 0;
+//     var result = "";
+// }
+console.log(generatePassword());
 
-    var passwordLength = 0;
-    var pwdCriteria = 0;
-    var result = "";
-}
 
 
 // word() indicates that it is either a method or a function 
